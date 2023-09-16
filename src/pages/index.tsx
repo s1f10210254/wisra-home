@@ -19,6 +19,11 @@ const Home = () => {
       description: 'INDEX',
     },
     {
+      name: 'USE WISRA',
+
+      description: 'USE WISRA',
+    },
+    {
       name: 'LED',
 
       description: 'LED',
@@ -27,11 +32,6 @@ const Home = () => {
       name: 'SERVO',
 
       description: 'SERVO',
-    },
-    {
-      name: 'USE WISRA',
-
-      description: 'USE WISRA',
     },
   ];
 
