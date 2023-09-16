@@ -1,11 +1,19 @@
 /* サイドバーの基本スタイル */
 .sidebar {
-  width: 25%;
+  width: 20%;
   min-height: 100vh; /* 画面の高さを全て使う */
   padding: 1rem;
+  padding: 20px;
+
+  /* overflow-y: auto; */
   background-color: #2b1e1e; /* グレイッシュな背景色 */
   border-right: 1px solid #ddd; /* 右側の境界線 */
   box-shadow: 2px 0 5px rgb(37 34 50 / 10%); /* 右側に微妙な影をつける */
+}
+
+.sidebarSubHeader {
+  margin: 15px 0;
+  font-size: 24px;
 }
 
 /* サイドバーの項目スタイル */
@@ -32,5 +40,6 @@
 .main {
   width: 100vw;
   height: 100vh;
+  overflow: auto;
   background-color: #f1ecec;
 }

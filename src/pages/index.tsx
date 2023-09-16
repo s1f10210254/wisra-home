@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import IndexComponent from '../components/IndexComponent';
-import LEDComponent from '../components/LEDComponent';
-import SERVOComponent from '../components/SERVOComponent';
+import IndexComponent from '../components/Index/IndexComponent';
+import LEDComponent from '../components/LED/LEDComponent';
+import SERVOComponent from '../components/SERVO/ServoComponent';
+import UseWisraComponent from '../components/UseWisra/UseWisraComponent';
 import styles from './index.module.css';
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
     {
       name: 'INDEX',
 
-      description: 'WELCOM TO WISRA',
+      description: 'INDEX',
     },
     {
       name: 'LED',
@@ -26,6 +27,11 @@ const Home = () => {
       name: 'SERVO',
 
       description: 'SERVO',
+    },
+    {
+      name: 'USE WISRA',
+
+      description: 'USE WISRA',
     },
   ];
 
@@ -62,6 +68,8 @@ function renderContentBasedOnItemName(name: string) {
       return <LEDComponent />;
     case 'SERVO':
       return <SERVOComponent />;
+    case 'USE WISRA':
+      return <UseWisraComponent />;
   }
 }
 

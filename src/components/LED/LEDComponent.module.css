@@ -28,3 +28,9 @@
   font-weight: bold;
   color: red;
 }
+
+.gazou {
+  width: 533px;
+  height: 483px;
+  background: url('../../assets/images/led-scene-0.gif') no-repeat;
+}
