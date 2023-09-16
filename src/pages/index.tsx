@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './index.module.css';
 
 const Home = () => {
@@ -32,16 +33,15 @@ const Home = () => {
   return (
     <div style={{ display: 'flex' }}>
       <aside className={styles.sidebar}>
-        {itemData.map((item) => (
-          <div
-            key={item.name}
-            className={`sidebarItem ${
-              selectedItem && selectedItem.name === item.name ? 'active' : ''
-            }`}
+        {itemData.map((item, index) => (
+          <Link
+            key={index}
+            to={`./item${index + 1}`}
+            className={styles.sidebarItem}
             onClick={() => setSelectedItem(item)}
           >
             {item.name}
-          </div>
+          </Link>
         ))}
       </aside>
       <main className={styles.main}>
@@ -51,7 +51,7 @@ const Home = () => {
             <p>{selectedItem.description}</p>
           </div>
         ) : (
-          <p>項目を選択してください</p>
+          <h1>WELCOME TO WISRA</h1>
         )}
       </main>
     </div>

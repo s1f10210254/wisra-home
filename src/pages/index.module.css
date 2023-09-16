@@ -1,9 +1,9 @@
 /* サイドバーの基本スタイル */
 .sidebar {
-  width: 20%;
+  width: 25%;
   min-height: 100vh; /* 画面の高さを全て使う */
   padding: 1rem;
-  background-color: #d0b4b4; /* グレイッシュな背景色 */
+  background-color: #2b1e1e; /* グレイッシュな背景色 */
   border-right: 1px solid #ddd; /* 右側の境界線 */
   box-shadow: 2px 0 5px rgb(37 34 50 / 10%); /* 右側に微妙な影をつける */
 }
@@ -12,7 +12,7 @@
 .sidebarItem {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
-  color: #333; /* テキストの色 */
+  color: #e3c6c6; /* テキストの色 */
   cursor: pointer;
   border-radius: 5px; /* 角の丸み */
   transition: background-color 0.3s; /* 背景色の変更をスムーズにする */
