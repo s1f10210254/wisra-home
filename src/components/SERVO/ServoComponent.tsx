@@ -4,7 +4,7 @@ const SERVOComponent: React.FC = () => {
   return (
     <div>
       {/* SERVOに関する詳細なコンテンツをここに追加します */}
-      <p>SERVOの内容</p>
+      <p>開発中</p>
     </div>
   );
 };

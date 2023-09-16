@@ -24,12 +24,12 @@ const Home = () => {
       description: 'USE WISRA',
     },
     {
-      name: 'LED',
+      name: '-LED',
 
       description: 'LED',
     },
     {
-      name: 'SERVO',
+      name: '-SERVO',
 
       description: 'SERVO',
     },
@@ -64,9 +64,9 @@ function renderContentBasedOnItemName(name: string) {
   switch (name) {
     case 'INDEX':
       return <IndexComponent />;
-    case 'LED':
+    case '-LED':
       return <LEDComponent />;
-    case 'SERVO':
+    case '-SERVO':
       return <SERVOComponent />;
     case 'USE WISRA':
       return <UseWisraComponent />;
