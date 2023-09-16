@@ -31,7 +31,8 @@ const UseWisraComponent: React.FC = () => {
     console.log('Updated data: ', updatedTempData);
   };
 
-  const [showInstructions, setShowInstructions] = useState<boolean>(false);
+  const [showsetup, setSetup] = useState<boolean>(false);
+  const [showLED, setShowLED] = useState<boolean>(false);
 
   const handleButtonClick = () => {
     setData(tempData);
@@ -42,7 +43,8 @@ const UseWisraComponent: React.FC = () => {
     // } else {
     //   setShowInstructions(false);
     // }
-    setShowInstructions(data[0].isChecked ? true : false);
+    setSetup(data[0].isChecked ? true : false);
+    setShowLED(data[0].number ? true : false);
   };
 
   return (
@@ -64,7 +66,7 @@ const UseWisraComponent: React.FC = () => {
         </div>
       ))}
       <button onClick={handleButtonClick}>起動</button>
-      {showInstructions && (
+      {showsetup && (
         <div className={styles.instructions}>
           <h2>Setup</h2>
           <ol>
@@ -83,6 +85,40 @@ const UseWisraComponent: React.FC = () => {
               Arduinoにアップロードする
             </li>
           </ol>
+        </div>
+      )}
+      {showLED && (
+        <div className={styles.ledContainer}>
+          <h2 className={styles.ledTitle}>LEDを制御する</h2>
+
+          <div className={styles.gazou} />
+          <h3 className={styles.ledSubtitle}>LED を制御するためのインスタンスの作成</h3>
+          <pre className={styles.codeBlock}>
+            <code>const led = LED(13); // ピン13を制御するインスタンスの作成</code>
+          </pre>
+
+          <h3 className={styles.ledSubtitle}>LEDをオンにする</h3>
+          <pre className={styles.codeBlock}>
+            <code>led.on();</code>
+          </pre>
+
+          <h3 className={styles.ledSubtitle}>LEDをオフにする</h3>
+          <pre className={styles.codeBlock}>
+            <code>led.off();</code>
+          </pre>
+
+          <h3 className={styles.ledSubtitle}>LEDを点滅させる</h3>
+          <pre className={styles.codeBlock}>
+            <code>
+              led.blink(); // デフォルトでは1秒間隔で点滅します。
+              <br />
+              led.blink(2000); // 2秒間隔で点滅します。
+            </code>
+          </pre>
+
+          <p className={styles.note}>
+            注意: onやblinkメソッドを使用すると、エンターキーを押すまでLEDの制御が継続されます。
+          </p>
         </div>
       )}
     </div>
