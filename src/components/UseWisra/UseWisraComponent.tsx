@@ -48,9 +48,9 @@ const UseWisraComponent: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       {data.map((item, index) => (
-        <div key={index}>
+        <div key={index} className={styles.item}>
           <input
             type="checkbox"
             checked={item.isChecked}
@@ -65,7 +65,9 @@ const UseWisraComponent: React.FC = () => {
           />
         </div>
       ))}
-      <button onClick={handleButtonClick}>起動</button>
+      <button className={styles.button} onClick={handleButtonClick}>
+        起動
+      </button>
       {showsetup && (
         <div className={styles.instructions}>
           <h2>Setup</h2>

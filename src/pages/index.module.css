@@ -1,6 +1,6 @@
 /* サイドバーの基本スタイル */
 .sidebar {
-  width: 20%;
+  width: 15vw;
   min-height: 100vh; /* 画面の高さを全て使う */
   padding: 1rem;
   padding: 20px;
