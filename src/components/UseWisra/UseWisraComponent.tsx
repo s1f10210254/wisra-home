@@ -93,10 +93,10 @@ const UseWisraComponent: React.FC = () => {
         <div className={styles.ledContainer}>
           <h2 className={styles.ledTitle}>LEDを制御する</h2>
 
-          <div className={styles.gazou} />
+          {/* <div className={styles.gazou} /> */}
           <h3 className={styles.ledSubtitle}>LED を制御するためのインスタンスの作成</h3>
           <pre className={styles.codeBlock}>
-            <code>const led = LED(13); // ピン13を制御するインスタンスの作成</code>
+            <code>const led = LED({data[0].number}); // ピン13を制御するインスタンスの作成</code>
           </pre>
 
           <h3 className={styles.ledSubtitle}>LEDをオンにする</h3>
